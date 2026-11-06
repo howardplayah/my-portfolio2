@@ -1,0 +1,395 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #87c4f2;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background: #87c4f2;
+    min-height: 80px;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #164e63;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #164e63;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* DARK MODE BUTTON */
+#themeButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #164e63;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    background: #267a96;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 90px 10%;
+    min-height: 350px;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #164e63;
+}
+
+/* HOME SECTION */
+.home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg, #dff6ff, #ffffff);
+}
+
+.home-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 42px;
+    margin: 15px 0;
+    color: #164e63;
+}
+
+.home-content h3 {
+    margin-bottom: 20px;
+    color: #267a96;
+}
+
+.home-content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* PROFILE PICTURE */
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 6px solid #87c4f2;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.home-image img:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #164e63;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #267a96;
+    transform: translateY(-3px);
+}
+
+/* ABOUT ME SECTION */
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.profile h3 {
+    margin-bottom: 15px;
+    color: #267a96;
+}
+
+.profile p {
+    margin-bottom: 15px;
+}
+
+/* SKILLS, PROJECTS, EDUCATION CARDS */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #267a96;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+/* WORK EXPERIENCE SECTION */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.experience-box {
+    background: white;
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.experience-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.experience-box h3 {
+    color: #267a96;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.experience-box .duration {
+    color: #164e63;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.experience-box ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.experience-box li {
+    margin-bottom: 8px;
+}
+
+/* CONTACT SECTION */
+.contact-box {
+    text-align: center;
+    line-height: 2;
+}
+
+/* FOOTER */
+footer {
+    background: #164e63;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #17212b;
+    color: #f1f5f9;
+}
+
+body.dark-mode header {
+    background: #243746;
+}
+
+body.dark-mode .logo,
+body.dark-mode nav a,
+body.dark-mode section h2 {
+    color: #a5e5ff;
+}
+
+body.dark-mode .home {
+    background: #1e303e;
+}
+
+body.dark-mode .home-content h1,
+body.dark-mode .home-content h3 {
+    color: #a5e5ff;
+}
+
+body.dark-mode .card,
+body.dark-mode .experience-box {
+    background: #243746;
+    color: white;
+}
+
+body.dark-mode .card h3,
+body.dark-mode .profile h3,
+body.dark-mode .experience-box h3 {
+    color: #a5e5ff;
+}
+
+body.dark-mode .experience-box .duration {
+    color: #a5e5ff;
+}
+
+body.dark-mode #themeButton {
+    background: #a5e5ff;
+    color: #17212b;
+}
+
+body.dark-mode .home-image img {
+    border-color: #a5e5ff;
+}
+
+/* TABLET AND MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-box {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .experience-box {
+        padding: 22px;
+    }
+}
